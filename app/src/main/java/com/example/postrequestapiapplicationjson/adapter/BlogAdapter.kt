@@ -33,8 +33,8 @@ class BlogAdapter(private val context: Context): RecyclerView.Adapter<BlogAdapte
 
     inner class BlogViewHolder(item: View) : RecyclerView.ViewHolder(item) {
 
-        val txtTitle: TextView = item.findViewById(R.id.tv_title)
-        val txtDesc: TextView = item.findViewById(R.id.tv_desc)
+        private val txtTitle: TextView = item.findViewById(R.id.tv_title)
+        private val txtDesc: TextView = item.findViewById(R.id.tv_desc)
 
         fun bindModel(b: Placeholder) {
             txtTitle.text = b.title

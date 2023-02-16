@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".util.SubscriptionsFragment">
+    tools:context=".SubscriptionsFragment">
 
     <TextView
         android:id="@+id/tv_subscription"

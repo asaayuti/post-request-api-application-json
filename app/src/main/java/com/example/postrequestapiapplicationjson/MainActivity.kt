@@ -3,7 +3,6 @@ package com.example.postrequestapiapplicationjson
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.postrequestapiapplicationjson.util.SubscriptionsFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         replaceFragment(SubscriptionsFragment())
+        replaceFragment(LibraryFragment())
 
     }
 

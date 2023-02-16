@@ -1,4 +1,4 @@
-package com.example.postrequestapiapplicationjson.util
+package com.example.postrequestapiapplicationjson
 
 import android.os.Bundle
 import android.util.Log
@@ -18,7 +18,7 @@ import java.io.IOException
 class SubscriptionsFragment : Fragment() {
 
     lateinit var blogAdapter: BlogAdapter
-    var lm = LinearLayoutManager(activity)
+    private var lm = LinearLayoutManager(activity)
     private var _binding: FragmentSubscriptionsBinding? = null
     private val binding get() = _binding!!
 
@@ -39,7 +39,7 @@ class SubscriptionsFragment : Fragment() {
         getData()
     }
 
-    fun initView() {
+    private fun initView() {
         binding.rvBlog.layoutManager = lm
         blogAdapter = BlogAdapter(requireActivity())
         binding.rvBlog.adapter = blogAdapter
@@ -65,7 +65,8 @@ class SubscriptionsFragment : Fragment() {
                 val result = gson.fromJson(body, Array<Placeholder>::class.java).toList()
 
                 activity?.runOnUiThread {
-                    binding.tvSubscription.text = result.get(0).body!!
+                    // menampilkan body index ke 0 ke text view
+//                    binding.tvSubscription.text = result[0].body!!
                     blogAdapter.setBlog(result)
                 }
             }
