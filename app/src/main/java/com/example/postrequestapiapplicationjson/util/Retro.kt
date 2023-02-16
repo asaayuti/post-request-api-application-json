@@ -5,10 +5,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class Retro {
-    fun getRetroClientInstance() : Retrofit {
+    fun getRetroClientInstance(url: String) : Retrofit {
         val gson = GsonBuilder().setLenient().create()
         return Retrofit.Builder()
-            .baseUrl("https://jsonplaceholder.typicode.com/")
+            .baseUrl(url)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }

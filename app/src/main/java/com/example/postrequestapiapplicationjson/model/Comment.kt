@@ -9,7 +9,7 @@ class Comment {
     // kalau nama variable sudah sama dengan data api, bisa tidak pakai SerializedName
     @SerializedName("postId")
     @Expose
-    var post_id: Int? = null
+    var postIid: Int? = null
 
     @SerializedName("id")
     @Expose
